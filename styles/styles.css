@@ -34,7 +34,6 @@ body {
 
 .square {
   display: flex;
-  /* border: solid; */
   width: 150px;
   height: 150px;
   align-items: center;
