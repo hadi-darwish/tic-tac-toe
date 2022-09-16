@@ -9,8 +9,13 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
 }
 
 .grid {
@@ -18,13 +23,34 @@ body {
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
   background-image: url("../images/board.png");
+
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   gap: 5px;
+  justify-items: center;
+  align-items: center;
 }
 
 .square {
-  width: 200px;
-  height: 200px;
-  background-color: blue;
+  display: flex;
+  /* border: solid; */
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade {
+  align-self: center;
+  justify-self: center;
+  opacity: 0.5;
+  width: 120px;
+  height: 120px;
+}
+.place {
+  align-self: center;
+  justify-self: center;
+  width: 120px;
+  height: 120px;
 }
