@@ -15,7 +15,11 @@ body {
 
 .scores {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+.scores > h1 {
+  margin: 10px 0;
 }
 
 .grid {
@@ -52,4 +56,13 @@ body {
   justify-self: center;
   width: 120px;
   height: 120px;
+}
+
+button {
+  width: 200px;
+  text-align: center;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  font-size: 30px;
 }

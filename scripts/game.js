@@ -55,6 +55,7 @@ if (playing) {
         }
         // console.log(grid[index]);
       }
+      //this will check for winning
       if (checkWin()) {
         playing = false;
         if (turn == 1) {
@@ -67,10 +68,8 @@ if (playing) {
           score.innerText = redWon;
         }
         console.log(playing);
-      }
-      if (checkDraw()) {
-        playing = false;
-        score.innerText = draw;
+      } else {
+        checkDraw();
       }
     };
   });
@@ -87,6 +86,8 @@ cont.onclick = () => {
     element.innerHTML = "";
     element.classList = "square";
   });
+  score.innerText = "";
+  playing = true;
 };
 
 // const check for win functions
@@ -126,16 +127,6 @@ function check(a, b, c) {
 
 //function to check draw
 const checkDraw = () => {
-  //   if (
-  //     square.forEach((element) => {
-  //       element.classList.contains("placed");
-  //     })
-  //   ) {
-  //     winner = draw;
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
   let i = 0;
   square.forEach((element) => {
     if (element.classList.contains("placed")) {
@@ -143,9 +134,11 @@ const checkDraw = () => {
     }
   });
 
-  if (i == 9 && !checkWin()) {
+  if (i == 9) {
     grid = ["", "", "", "", "", "", "", "", ""];
     winner = draw;
+    score.innerText = draw;
+    playing = false;
     return true;
   }
   return false;
