@@ -1,0 +1,30 @@
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  background-image: url("../images/board.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  gap: 5px;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
