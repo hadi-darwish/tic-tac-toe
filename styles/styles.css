@@ -1,0 +1,68 @@
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.scores > h1 {
+  margin: 10px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  background-image: url("../images/board.png");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+.square {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade {
+  align-self: center;
+  justify-self: center;
+  opacity: 0.5;
+  width: 120px;
+  height: 120px;
+}
+.place {
+  align-self: center;
+  justify-self: center;
+  width: 120px;
+  height: 120px;
+}
+
+button {
+  width: 200px;
+  text-align: center;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  font-size: 30px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <!-- Start Scores  Section-->
+    <section class="scores">
+      <h1>Red: <span id="red-score"></span></h1>
+      <h1>Yellow: <span id="yellow-score"></span></h1>
+      <h1 id="win"></h1>
+    </section>
+    <!-- End Scores  Section-->
+    <!-- Start Game Section -->
+    <div class="grid" id="grid">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+    <!-- End Game Section -->
+    <!-- Start Controls Section -->
+    <section class="controls">
+      <button id="restart">Restart</button>
+      <button id="cont">Continue</button>
+    </section>
+    <!-- End Controls Section -->
+    <script src="./scripts/game.js"></script>
+  </body>
+</html>
